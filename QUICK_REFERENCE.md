@@ -22,6 +22,7 @@ A quick reference for using Copilot Addons chatmode files.
 | `javascript-typescript-dev.md` | Modern JS/TS development | Working on JavaScript/TypeScript |
 | `testing-best-practices.md` | Comprehensive testing | Writing or reviewing tests |
 | `security-focused-dev.md` | Security-first development | Building secure applications |
+| `git-version-control.md` | Git and version control best practices | Managing code with Git |
 
 ### Templates (`chatmodes/templates/`)
 

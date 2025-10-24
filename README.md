@@ -31,12 +31,30 @@ Copilotaddons/
 
 ## 🚀 Getting Started
 
+### Quick Start
+
+Check out the [Quick Reference Guide](QUICK_REFERENCE.md) for a 60-second start!
+
+### Available Chatmode Files
+
+**Example Chatmodes** (`chatmodes/examples/`):
+- **python-dev.md** - Python development with PEP 8, type hints, and testing
+- **javascript-typescript-dev.md** - Modern JavaScript/TypeScript with ES6+ and best practices
+- **testing-best-practices.md** - Comprehensive testing strategies and patterns
+- **security-focused-dev.md** - Security-first development with OWASP guidelines
+- **git-version-control.md** - Git workflows, commit messages, and version control best practices
+
 ### Using Chatmode Files
 
 1. Browse the `chatmodes/` directory to find a chatmode that fits your needs
-2. Copy the chatmode file to your project's `.github/` directory
-3. Configure GitHub Copilot to use the chatmode file
-4. Start coding with enhanced Copilot assistance!
+2. Copy the chatmode file to your project's `.github/` directory as `copilot-instructions.md`:
+   ```bash
+   mkdir -p .github
+   cp chatmodes/examples/python-dev.md .github/copilot-instructions.md
+   ```
+3. Customize the file for your project-specific needs (optional)
+4. Commit the file to your repository
+5. Start coding with enhanced Copilot assistance!
 
 ### Contributing New or Improved Chatmodes
 
