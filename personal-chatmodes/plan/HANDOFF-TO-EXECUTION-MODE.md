@@ -13,7 +13,7 @@ Create a **6-step founder-friendly development workflow system** consisting of 6
 
 ## ✅ Critical Requirements from chatmodeflow.md
 
-### MUST Follow These Rules:
+### MUST Follow These Rules
 
 1. **Follow GitHub Copilot Chatmode Guidelines**
    - Structure: `https://github.com/github/awesome-copilot/tree/main/chatmodes`
@@ -42,17 +42,20 @@ Create a **6-step founder-friendly development workflow system** consisting of 6
 ## 🎯 The 6 Modes to Create
 
 ### Mode 1: Step 2 - Request Enhancement
+
 **File**: `personal-chatmodes/chatmodes/step-2-enhance-request/enhance-request.chatmode.md`
 
 **Purpose**: Transform vague founder requests into clear, technical specifications
 
 **Key Requirements**:
+
 - Input: Founder's plain English request
 - Process: Enhance with React Native/Expo/Supabase terminology
 - Output: Technical specification with components, state management, navigation, mobile considerations
 - Must understand: Gluestack UI components, NativeWind styling, Expo Router, platform differences (iOS/Android)
 
 **Example**:
+
 ```
 Input: "Dashboard with + icons for modules"
 Output: "Create a modular dashboard screen using:
@@ -68,11 +71,13 @@ Output: "Create a modular dashboard screen using:
 ---
 
 ### Mode 2: Step 3 - Build Plan
+
 **File**: `personal-chatmodes/chatmodes/step-3-build-plan/build-plan.chatmode.md`
 
 **Purpose**: Create structured implementation plan from enhanced request
 
 **Key Requirements**:
+
 - Input: Enhanced technical specification from Step 2
 - Process: Break down into phases with specific tasks
 - Output: Implementation plan following `implementation-plan.chatmode.md` template
@@ -80,6 +85,7 @@ Output: "Create a modular dashboard screen using:
 - Must reference: Existing project patterns, file structure, naming conventions
 
 **Example Output Structure**:
+
 ```
 Phase 1: Setup & State Management
 - Create Zustand store for dashboard state
@@ -100,17 +106,20 @@ Phase 3: Integration
 ---
 
 ### Mode 3: Step 4 - TDD Red Phase (MOST CRITICAL!)
+
 **File**: `personal-chatmodes/chatmodes/step-4-tdd-red/tdd-red.chatmode.md`
 
 **Purpose**: Write comprehensive tests BEFORE any implementation code (Red Phase of TDD)
 
 **CRITICAL Requirements from chatmodeflow.md**:
+
 - ⚠️ "TTD and Debug modes need to be very precise in their instructions to ensure high code quality and effective problem-solving"
 - Must be extremely detailed and methodical
 - Must enforce test-first discipline
 - Must cover all test types
 
 **Key Requirements**:
+
 - Input: Build plan from Step 3
 - Process: Generate test files for ALL components, hooks, and features
 - Output: Test suites that FAIL (because code doesn't exist yet)
@@ -122,6 +131,7 @@ Phase 3: Integration
   - **Mobile-Specific Tests**: Platform checks, offline behavior, permission handling
 
 **Test Coverage Requirements**:
+
 - Happy path scenarios
 - Edge cases (empty states, loading, errors)
 - Mobile-specific (screen sizes, keyboard, gestures)
@@ -129,6 +139,7 @@ Phase 3: Integration
 - Platform differences (iOS vs Android)
 
 **Example Output**:
+
 ```typescript
 // DashboardScreen.test.tsx
 describe('DashboardScreen', () => {
@@ -151,11 +162,13 @@ describe('DashboardScreen', () => {
 ---
 
 ### Mode 4: Step 5 - Build & Iterate (Green + Refactor)
+
 **File**: `personal-chatmodes/chatmodes/step-5-build-iterate/build-iterate.chatmode.md`
 
 **Purpose**: Implement code using Red-Green-Refactor TDD cycle
 
 **Key Requirements**:
+
 - Input: Test suites from Step 4 (all failing)
 - Process: Implement in iterations following TDD cycle
 - Output: Working, tested, clean code
@@ -163,6 +176,7 @@ describe('DashboardScreen', () => {
 **TDD Cycle Implementation**:
 
 **GREEN PHASE (TASK-018, TASK-019)**:
+
 1. Run tests → Confirm they fail (Red)
 2. Write MINIMUM code to make ONE test pass
 3. Run tests → Verify that test now passes
@@ -170,6 +184,7 @@ describe('DashboardScreen', () => {
 5. Continue until ALL tests pass (Green achieved)
 
 **REFACTOR PHASE (TASK-020, TASK-021)**:
+
 1. All tests passing? Good! Now improve the code
 2. Extract components, improve naming, remove duplication
 3. Run tests after EACH refactor → Must stay green
@@ -185,6 +200,7 @@ describe('DashboardScreen', () => {
 **ITERATE**: Loop Green → Refactor until code is production-ready
 
 **React Native/Expo Specific Standards**:
+
 - Use Gluestack UI components
 - Follow NativeWind styling patterns
 - Implement Expo Router navigation correctly
@@ -195,6 +211,7 @@ describe('DashboardScreen', () => {
 - Implement proper loading and error states
 
 **Example Iteration**:
+
 ```
 Iteration 1 (GREEN):
 - Write basic DashboardScreen component
@@ -223,11 +240,13 @@ DONE: All tests passing + clean code ✅
 ---
 
 ### Mode 5: Step 6 - Review & Enhance
+
 **File**: `personal-chatmodes/chatmodes/step-6-review-enhance/review-enhance.chatmode.md`
 
 **Purpose**: Final quality assurance before shipping
 
 **Key Requirements**:
+
 - Input: Working code from Step 5 (all tests passing)
 - Process: Comprehensive review across multiple dimensions
 - Output: Quality report + enhancements OR "✅ Ready to Ship"
@@ -235,6 +254,7 @@ DONE: All tests passing + clean code ✅
 **Review Checklist**:
 
 **React Native Performance**:
+
 - FlashList used for large lists?
 - Components memoized appropriately?
 - No inline functions in render?
@@ -242,6 +262,7 @@ DONE: All tests passing + clean code ✅
 - Bundle size impact acceptable?
 
 **Mobile-Specific**:
+
 - Works on iOS and Android?
 - Offline functionality works?
 - Safe area handled properly?
@@ -250,12 +271,14 @@ DONE: All tests passing + clean code ✅
 - Permissions handled gracefully?
 
 **Supabase Integration**:
+
 - Row Level Security (RLS) policies correct?
 - Queries optimized?
 - Real-time subscriptions cleaned up?
 - Error handling comprehensive?
 
 **Code Quality**:
+
 - TypeScript strict mode satisfied?
 - No `any` types?
 - Proper error boundaries?
@@ -263,16 +286,19 @@ DONE: All tests passing + clean code ✅
 - Code is maintainable?
 
 **Testing**:
+
 - All tests passing?
 - Coverage meets standards (>80%)?
 - E2E tests cover critical paths?
 
 **Security**:
+
 - User input validated?
 - No secrets in code?
 - Secure storage used for sensitive data?
 
 **Output Format**:
+
 ```
 ## Review Summary
 
@@ -300,11 +326,13 @@ If issues found → Quick fix → Re-run Step 6
 ---
 
 ### Mode 6: Founder Workflow Guide
+
 **File**: `personal-chatmodes/docs/founder-workflow-guide.md`
 
 **Purpose**: Simple guide for non-technical founders to use the system
 
 **Contents**:
+
 - Quick start guide
 - Example workflow with dashboard feature
 - When to use each step
@@ -356,7 +384,9 @@ tools: ['codebase', 'usages', 'vscodeAPI', 'think', 'problems', 'changes', 'test
 
 ### Example Output
 ```
+
 [Show concrete example]
+
 ```
 
 ## Project Context (CRITICAL)
@@ -428,6 +458,7 @@ After building all modes, validate with this scenario:
 **Founder Request**: "I want a dashboard template that has + icons that opens modules with components to place in your desired location"
 
 **Expected Flow**:
+
 1. ✅ Step 2: Enhances to React Native technical spec
 2. ✅ Step 3: Creates implementation plan with phases
 3. ✅ Step 4: Generates Jest/RTL/Detox tests (all failing)
@@ -471,7 +502,7 @@ Follow your existing execution mode standards:
 
 ---
 
-## 🎯 Ready to Execute!
+## 🎯 Ready to Execute
 
 You have everything you need to build this system. Follow the plan phase-by-phase, create each chatmode with care, and test the complete flow.
 
