@@ -1,0 +1,1 @@
+This folder contains project documentation technical details for the chatmode to be setup for.
